@@ -8,21 +8,23 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <div class='make-trip'>  
-      <form>
-        <input type="text" value="Your Name"></input>
-        <input type="text" value="Meeting Place"></input>
-        <input type="text" value="Where are you going"></input>
-        <input type="text" value="When are you Leaving"></input>
-        <input type="text" value="Address"></input>
-        <input type="text" value="Phone Number (not visible to other users"></input>
+      <form action="/" method="post">
+        <input type="text" name="input-name" value="Your Name" ></input>
+        <input type="text" name="input-meeting" value="Meeting Place" ></input>
+        <input type="text" name="input-destination" value="Where are you going" ></input>
+        <input type="text" name="input-time" value="When are you Leaving" ></input>
+        <input type="text" name="input-address" value="Address" ></input>
+        <input type="text" name="input-phone" value="Phone Number (not visible to other users"></input>
         <button >Plan It!</button>
       </form>
     </div>
+    
+    
     <div>
       <table>
-        <th>Meeting Place</th>
-        <th>Destination</th>
-        <th>Departure Time</th>
+        <th><button>Meeting Place</button></th>
+        <th><button>Destination</button></th>
+        <th><button>Departure Time</button></th>
         <tr>
           <!-- <td><%= title %></td><td><%= title %></td><td><%= title %></td><td><%= title %></td> -->
         </tr> 

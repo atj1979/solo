@@ -1,8 +1,30 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: "./images/7.jpg"
 }
 
 a {
   color: #00B7FF;
+}
+p {
+  margin: 10px;
+}
+input {
+  margin: 10px;
+}
+button{
+  margin: 10px;
+}
+th {
+  text-align: center;
+  border: 1px solid black;
+}
+td {
+  padding: 5px;
+  border: 1px solid black;
+}
+
+table {
+  border: 1px solid black;
 }

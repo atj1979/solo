@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html>
+  <script>
+
+
+
+  </script>
   <head>
-    <title><%= title %></title>
+    <title>March Pool</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>Welcome To March Pool</h1>
+    <p><%= title %></p>
     <div class='make-trip'>  
-      <form action="/" method="post">
-        <input type="text" name="input-name" value="Your Name" ></input>
-        <input type="text" name="input-meeting" value="Meeting Place" ></input>
-        <input type="text" name="input-destination" value="Where are you going" ></input>
-        <input type="text" name="input-time" value="When are you Leaving" ></input>
-        <input type="text" name="input-address" value="Address" ></input>
-        <input type="text" name="input-phone" value="Phone Number (not visible to other users"></input>
-        <button >Plan It!</button>
-      </form>
     </div>
     
     
     <div>
       <table>
-        <th><button>Meeting Place</button></th>
-        <th><button>Destination</button></th>
-        <th><button>Departure Time</button></th>
+      <form action="/" method="post" >
+        <tr class="form-group">
+        <th><input type="text" name="input-meeting" value="Meeting Place" ></input></th>
+        <th><input type="text" name="input-destination" value="Where to?" ></input></th>
+        <th><input type="text" name="input-time" value="When?" ></input></th>
+        <th><input type="text" name="input-phone" value="Phone Number?"></input></th>
+        <th><button class="btn btn-default">Plan It!</button></th>
+      </tr>
+      </form>
+        <th><button class="btn btn-default">Meeting Place</button></th>
+        <th><button class="btn btn-default">Departure Time</button></th>
+        <th><button class="btn btn-default">Destination</button></th>
+          <% 
+            if (data1 !== undefined){
+              for (var key in data1){ %>
         <tr>
-          <!-- <td><%= title %></td><td><%= title %></td><td><%= title %></td><td><%= title %></td> -->
+                <td><%= data1[key].meeting %></td><td><%= data1[key].time %></td><td><%= data1[key].destination %></td>
         </tr> 
+                <%
+              }
+            }
+          %>
       </table>
 
     </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   </body>
 </html>
